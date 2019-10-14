@@ -1,5 +1,44 @@
 .firsth {
     font-size: 30pt;
     color: #0078BC;
+    opacity: 0.8;
     text-decoration: underline;
+    font-style: italic;
+    font-family:'Times New Roman', Times, serif ;
 }
+.para1 {
+    font-size: 22pt;
+    font-style: italic;
+    font-family:'Times New Roman', Times, serif ;
+    opacity: 0.8;
+    
+    
+}
+.para2 {
+    font-size: 22pt;
+    font-style: italic;
+    font-family:'Times New Roman', Times, serif ;
+    opacity: 0.8;
+    
+}
+.para3 {
+    font-size: 22pt;
+    font-style: italic;
+    font-family:'Times New Roman', Times, serif ;
+    opacity: 0.8;
+}
+table {
+    border-width:1px; 
+    border-style:solid; 
+    border-color:black;
+
+    }
+   td { 
+    border-width:1px;
+    border-style:solid; 
+    border-color:#0078BC;
+    
+    }
+    .flotte {
+        float:left;
+        }
