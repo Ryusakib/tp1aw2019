@@ -27,18 +27,22 @@
     font-family:'Times New Roman', Times, serif ;
     opacity: 0.8;
 }
-table {
-    border-width:1px; 
-    border-style:solid; 
-    border-color:black;
 
-    }
-   td { 
-    border-width:1px;
-    border-style:solid; 
-    border-color:#0078BC;
     
+table { 
+    border-width: 1px;
+    border-style:outset; 
+    border-color:#0078BC;
+    border-top-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    box-shadow: 5px 5px 15px #0078BC;
+        
     }
-    .flotte {
-        float:left;
-        }
+td {
+    border-width: 0px;
+    border-style:outset; 
+    border-color:#0078BC;
+    border-top-left-radius: 20px;
+    
+}
+  
