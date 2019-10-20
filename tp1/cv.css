@@ -1,13 +1,16 @@
-
-
-
-  
-.flotte {
-    background-color: lightblue;
+h1{
+    color : rgb(0, 103, 188) ;
+    font-weight: bold;
+}
+table {
+    
+    background-color:white;
+    font-style: italic;
+    font-family:'Times New Roman', Times, serif ;
 }
 .firsth {
     font-size: 30pt;
-    color: black;
+    
     opacity: 0.8;
     text-decoration: underline;
     font-style: italic;
