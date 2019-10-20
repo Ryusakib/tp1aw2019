@@ -1,6 +1,13 @@
+
+
+
+  
+.flotte {
+    background-color: lightblue;
+}
 .firsth {
     font-size: 30pt;
-    color: #0078BC;
+    color: black;
     opacity: 0.8;
     text-decoration: underline;
     font-style: italic;
