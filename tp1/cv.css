@@ -55,4 +55,12 @@ td {
     border-top-left-radius: 20px;
     
 }
-  
+
+.r1 {
+    position: fixed ;
+    right: 20px;
+}
+.r2 {
+    position: fixed ;
+    right: 20px;
+}
