@@ -13,7 +13,7 @@ function validation() {
 
 	if(error == ""){
 		// OK
-		document.getElementById("resultat").innerHTML = "tout est ok" ;
+		document.getElementById("resultat").innerHTML = "Welcome"+ document.getElementById("txtNom") ;
 	}else{
 		document.getElementById("error").innerHTML = error ;
 	}
