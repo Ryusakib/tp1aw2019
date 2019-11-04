@@ -25,9 +25,23 @@
         <!--<script src="js/main.js"></script>-->
     </head>
     <body>        
-        <h1>tp2</h1>
-        <!-- Add your site or application content here -->
-        <p>Hello world! This is HTML5 Boilerplate.</p>
-        <img src="../galilee.png" alt="Logo Galilee"/>
+        <p>Welcome</p>
+			
+			<form method="post" action="MonTp">
+				<filedset>
+					<legend>Annonce</legend></br>
+					<label for='txtTitle'>Title</label></br>
+					<input id='txtTitle' name='txtLogin' type='text' /></br>
+					<label for='txtDescription'>Description</label></br>
+					<input id='txtDescription' name='txtDescription' type='text' /></br>
+					<label for='txtAdress'/>Adress</label></br>
+					<input id='txtAdress' name='txtAdress' type='text' /></br>
+					<label for='txtEmail'/>Email</label></br>
+					<input id='txtEmail' name='txtEmail' type='text' /><span class="erreur">${erreurs['email']}</span></br></br>
+					<input name='submit' type='submit' value='save' />
+				</filedset>		
+			</form>
+
+
     </body>
 </html>
