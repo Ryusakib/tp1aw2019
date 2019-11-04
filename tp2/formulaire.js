@@ -1,5 +1,5 @@
 function validation() {
-	this.event.preventDefault(); 
+	//this.event.preventDefault(); 
 	var error = "";
 
 	if (document.getElementById("txtNom").value.length == null)
@@ -13,9 +13,9 @@ function validation() {
 
 	if(error == ""){
 		// OK
-		document.getElementById("resultat").innerHTML = "tout est ok"
+		document.getElementById("resultat").innerHTML = "tout est ok" ;
 	}else{
-		document.getElementById("error").innerHTML = error
+		document.getElementById("error").innerHTML = error ;
 	}
 	return false;
 }
