@@ -1,50 +1,61 @@
 <!doctype html>
 <html>
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="x-ua-compatible" content="ie=edge">
-        <title>TP2</title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <link rel="apple-touch-icon" href="apple-touch-icon.png">
-        <!-- Place favicon.ico in the root directory -->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>TP2</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <style>
-          body{
-              background-color: #e9ebee;              
-              font-family: system, -apple-system, ".SFNSText-Regular", "San Francisco", "Roboto", "Segoe UI", "Helvetica Neue", "Lucida Grande", sans-serif;
-              font-size: 16px;
-              margin: 0 auto;
-              max-width: 800px;              
-          }
-        </style>
-        
-        <!-- Code à dé-commenter si besoin de fichier CSS ou JS -->
-        <link rel="stylesheet" href="formulaire.css">
-        <script src="js/formulaire.js"></script>
-    </head>
-    <body>        
-        <p>Welcome</p>
-			
-			
-        <form method="post" action="MonTp">
-            <filedset>
-                <legend>Personne</legend></br>
-                <label for='txtNom'>Nom</label><input id='txtNom' name='txtNom' type='text' required minlength="5" maxlength="20"/></br>
-                
-                <label for='txtPrenom'>Prenom</label><input id='txtPrenom' name='txtPrenom' type='text' required minlength="5" maxlength="20"> </br>
-                
-                <label for='txtDate'>Date de naissance</label><input id='txtDate' name='txtDate' type='date' /></br>
-                
-                <label for='txtAdress'/>Adress</label><input id='txtAdress' name='txtAdress' type='text' required minlength="5" maxlength="50" /></br>
-                
-                <label for='txtEmail'/>Email</label><input id='txtEmail' name='txtEmail' type='text' required minlength="5" maxlength="30"/></br></br>
-                
-                <input name='submit' type='submit' value='valider' />
-            </filedset>		
-        </form>
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <!-- Place favicon.ico in the root directory -->
+
+    <style>
+        body {
+            background-color: #e9ebee;
+            font-family: system, -apple-system, ".SFNSText-Regular", "San Francisco", "Roboto", "Segoe UI", "Helvetica Neue", "Lucida Grande", sans-serif;
+            font-size: 16px;
+            margin: 0 auto;
+            max-width: 800px;
+        }
+    </style>
+
+    <!-- Code à dé-commenter si besoin de fichier CSS ou JS -->
+    <link rel="stylesheet" href="formulaire.css">
+    <script src="formulaire.js"></script>
+</head>
+
+<body>
+    <p>Welcome</p>
 
 
-    </body>
+    <form onsubmit="validation(); ">
+        <filedset>
+            <legend>Personne</legend></br>
+            <label for='txtNom'>Nom</label>
+            <input id='txtNom' name='txtNom' type='text' required minlength="5" maxlength="20" /></br>
+
+            <label for='txtPrenom'>Prenom</label>
+            <input id='txtPrenom' name='txtPrenom' type='text' required minlength="5" maxlength="20"> </br>
+
+            <label for='txtDate'>Date de naissance</label>
+            <input id='txtDate' name='txtDate' type='date' /></br>
+
+            <label for='txtAdress' />Adress</label>
+            <input id='txtAdress' name='txtAdress' type='text' required minlength="5" maxlength="50" /></br>
+
+            <label for='txtEmail' />Email</label>
+            <input id='txtEmail' name='txtEmail' type='text' required minlength="5" maxlength="30" /></br></br>
+
+            <input name='submit' type='submit' value='valider'  />
+        </filedset>
+    </form>
+
+    <div id="error"></div>
+    <div id="resulat"></div>
+
+
+</body>
+
 </html>
