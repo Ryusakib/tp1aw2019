@@ -1,6 +1,5 @@
-label
+label, label + input
 {
-	display: block;
+	display: inline-block;
 	width: 200px;
-	float: left;
 }
