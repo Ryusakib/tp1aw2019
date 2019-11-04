@@ -1,5 +1,5 @@
 function validation() {
-	//this.event.preventDefault(); 
+	this.event.preventDefault(); 
 	var error = "";
 
 	if (document.getElementById("txtNom").value.length == null)
