@@ -2,7 +2,7 @@ function validation() {
 	this.event.preventDefault(); 
 	var error = "";
 
-	if (document.getElementById("txtNom").value.length == null)
+	if (document.getElementById("txtNom").value.length == null && (document.getElementById("txtNom").value == "     ")
 		error += "La saisie du nom est obligatoire<br/>";
 	if (document.getElementById("txtPrenom").value.length == null)
 		error += "La saisie du nom est obligatoire";
