@@ -1,15 +1,15 @@
+
 function validation() {
 	this.event.preventDefault(); 
 	var error = "";
-
-	if (document.getElementById("txtNom").value.trim.length == null )
+	var nom = document.getElementById("txtNom").value.trim() ;
+	if (nom.length == null )
 		error += "La saisie du nom est obligatoire<br/>";
-	if (document.getElementById("txtPrenom").value.length == null)
+	if (document.getElementById("txtPrenom").value.trim().length == null)
 		error += "La saisie du nom est obligatoire";
-	if (document.getElementById("txtAdress").value.length == null)
+	if (document.getElementById("txtAdress").value.trim().length == null)
 		error += "La saisie du nom est obligatoire";
-	if (document.getElementById("txtEmail").value.length == null)
-		error += "La saisie du nom est obligatoire";
+	
 
 	if(error == ""){
 		// OK
@@ -18,4 +18,6 @@ function validation() {
 		document.getElementById("error").innerHTML = error ;
 	}
 	return false;
+
+
 }
