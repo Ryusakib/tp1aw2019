@@ -1,6 +1,7 @@
 
 function validation() {
-	this.event.preventDefault(); 
+	this.event.preventDefault();
+	 
 	var error = "";
 	var nom = document.getElementById("txtNom").value.trim() ;
 	var prenom = document.getElementById("txtPrenom").value.trim() ;
@@ -14,12 +15,22 @@ function validation() {
 	
 
 	if(error == ""){
+		
 		// OK
 		document.getElementById("resultat").innerHTML = "Welcome "+ document.getElementById("txtNom").value ;
+		document.getElementById("error").innerHTML = "" ;
 	}else{
+		
 		document.getElementById("error").innerHTML = error ;
 	}
-	return false;
+	//return false;
 
+
+}
+
+function nowhite() {
+	document.getElementById("txtNom").value = document.getElementById("txtNom").value.trim() ;
+	document.getElementById("txtPrenom").value = document.getElementById("txtPrenom").value.trim() ;
+	document.getElementById("txtAdress").value = document.getElementById("txtAdress").value.trim() ;
 
 }
