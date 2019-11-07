@@ -7,9 +7,9 @@ function validation() {
 	var adress = document.getElementById("txtAdress").value.trim() ;
 	if (nom.length < 5 )
 		error += "La saisie du nom est obligatoire<br/>";
-	if (prenom.length == null)
+	if (prenom.length < 5)
 		error += "La saisie du nom est obligatoire";
-	if (adress.length == null)
+	if (adress.length < 5)
 		error += "La saisie du nom est obligatoire";
 	
 
