@@ -3,11 +3,13 @@ function validation() {
 	this.event.preventDefault(); 
 	var error = "";
 	var nom = document.getElementById("txtNom").value.trim() ;
-	if (nom.length == null )
+	var prenom = document.getElementById("txtPrenom").value.trim() ;
+	var adress = document.getElementById("txtAdress").value.trim() ;
+	if (nom.length < 5 )
 		error += "La saisie du nom est obligatoire<br/>";
-	if (document.getElementById("txtPrenom").value.trim().length == null)
+	if (prenom.length == null)
 		error += "La saisie du nom est obligatoire";
-	if (document.getElementById("txtAdress").value.trim().length == null)
+	if (adress.length == null)
 		error += "La saisie du nom est obligatoire";
 	
 
