@@ -38,8 +38,3 @@ function nowhite() {
 
 }
 
-function bensid() {
-	var x ;
-	x= document.getElementById("error").innerHTML = "lache ma bite bensid" ;
-
-}
