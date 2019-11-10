@@ -3,18 +3,25 @@ function validation() {
 	this.event.preventDefault();
 	 
 	var error = "";
-	var nom = document.getElementById("txtNom").value.trim() ;
-	var prenom = document.getElementById("txtPrenom").value.trim() ;
-	var adress = document.getElementById("txtAdress").value.trim() ;
+	
 	var date = document.getElementById("txtDate").value ;
-	if(date==null)
-		error += "veuillez saisir la date" ;
+
+	var nom =document.getElementById("txtNom").value
+	var prenom = document.getElementById("txtPrenom").value 
+	var adress = document.getElementById("txtAdress").value 
+
+	 nom = document.getElementById("txtNom").value.trim() ;
+	 prenom= document.getElementById("txtPrenom").value.trim() ;
+	 adress= document.getElementById("txtAdress").value.trim() ;
+
+	if(date=="")
+		error += "Veuillez saisir une date" ;
 	if (nom.length < 5 )
-		error += "La saisie du nom est obligatoire<br/>";
+		error += "Votre Nom doit contenir au moins 5 caractères<br/>";
 	if (prenom.length < 5)
-		error += "La saisie du Prenom est obligatoire";
+		error += "Votre Prenom doit contenir au moins 5 caractères<br/>";
 	if (adress.length < 5)
-		error += "La saisie de l'adress est obligatoire";
+		error += "Votre adress doit contenir au moins 5 caractères";
 	
 
 	if(error == ""){
@@ -31,10 +38,4 @@ function validation() {
 
 }
 
-function nowhite() {
-	document.getElementById("txtNom").value = document.getElementById("txtNom").value.trim() ;
-	document.getElementById("txtPrenom").value = document.getElementById("txtPrenom").value.trim() ;
-	document.getElementById("txtAdress").value = document.getElementById("txtAdress").value.trim() ;
-
-}
 
