@@ -1,10 +1,10 @@
 $( document ).ready(function() {
 
     $("#form1").on("submit",function(event){
-
-        $('#myModale').modal('show');
-
         event.preventDefault();
+
+        $('#myModal').modal('show');
+
         
 
 
