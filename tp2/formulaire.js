@@ -32,6 +32,7 @@ function validation() {
 	}else{
 		
 		document.getElementById("error").innerHTML = error ;
+		document.getElementById("resultat").innerHTML = "" ;
 	}
 	return false;
 
