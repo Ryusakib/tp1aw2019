@@ -2,13 +2,7 @@ $( document ).ready(function() {
 
     $("#form1").on("submit",function(event){
 
-        var nom = $("#txtNom").val() ;
-
-        if (nom==null) {
-            $(".modal-body").html('<img src="map.jpg"/>');
-            $('#myModal').modal("show");
-            $(".modal-title").text("SALAM");
-        }
+        $('#myModale').modal('show');
 
         event.preventDefault();
         
