@@ -4,9 +4,9 @@ $( document ).ready(function() {
         event.preventDefault();
 
 
-        var nom = $("#txtName").val() ;
-        
-        if (nom == null) {
+
+
+        if ($("#txtNom").val() < 5) {
         $('#myModal').modal('show');
         }
 
