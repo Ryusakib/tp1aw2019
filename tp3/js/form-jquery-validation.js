@@ -3,7 +3,13 @@ $( document ).ready(function() {
     $("#form1").on("submit",function(event){
         event.preventDefault();
 
+
+        var nom = $("#txtName").val() ;
+        
+        if (nom == null) {
         $('#myModal').modal('show');
+        }
+
 
         
 
