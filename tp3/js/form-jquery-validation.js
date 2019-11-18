@@ -6,9 +6,15 @@ $( document ).ready(function() {
 
 
 
-        if ($("#txtNom").val() < 5) {
-        $('#myModal').modal('show');
+        if ($("#txtNom").val()=="" ) {
+            $(".hello").text("Veuillez saisin votre Name");
+            $('#myModal').modal('show');
         }
+        if ($("#txtPrenom").val()=="" ) {
+            $(".hello").text("Veuillez saisir votre Firstname");
+            $('#myModal').modal('show');
+        }
+
 
 
         
