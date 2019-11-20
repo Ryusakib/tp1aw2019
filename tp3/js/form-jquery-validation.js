@@ -14,21 +14,35 @@ $( document ).ready(function() {
            
         }
         if ($("#txtPrenom").val()=="" ) {
-            error=$(".hello").text("Veuillez saisir votre Firstname");
+            $(".hello").text("Veuillez saisir votre Firstname");
             $('#myModal').modal('show');
             x=x+1 ;
         }
         if($("#txtbirthday").val()=="" ) {
-            error=$(".hello").text("Veuillez saisir votre birthday");
+            $(".hello").text("Veuillez saisir votre birthday");
             $('#myModal').modal('show');
             x=x+1 ;
 
         }
 
-        if(x==0) {
-            $(".hello").text("welcome");
-            $('#myModal').modal('show');
+        if($("#passw").val()=="0000") {
+
+            if (x==0) {
+            $(".hello").text("welcome" +" "+ $("#txtNom").val());
+            $(".modal-body").html('<img src="image3.png"/>');
+            $('#myModal').modal('show');}
+            
+
         }
+        else {
+
+            $(".hello").text("Veuillez saisir le bon mot de passe par défault 0000");
+            $('#myModal').modal('show');
+            x=x+1 ;
+        
+    }
+
+
 
 
         
