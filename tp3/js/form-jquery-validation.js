@@ -5,16 +5,25 @@ $( document ).ready(function() {
 
 
 
+        var x = 0 ;
 
         if ($("#txtNom").val()=="" ) {
             $(".hello").text("Veuillez saisir votre Name");
             $('#myModal').modal('show');
+            x = x + 1 ; 
+           
         }
         if ($("#txtPrenom").val()=="" ) {
-            $(".hello").text("Veuillez saisir votre Firstname");
+            error=$(".hello").text("Veuillez saisir votre Firstname");
             $('#myModal').modal('show');
+            x=x+1 ;
         }
 
+        if(x==0) {
+            $(".hello").text("welcome");
+            $('#myModal').modal('show');
+
+        }
 
 
         
