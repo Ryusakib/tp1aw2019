@@ -18,11 +18,16 @@ $( document ).ready(function() {
             $('#myModal').modal('show');
             x=x+1 ;
         }
+        if($("#txtbirthday").val()=="" ) {
+            error=$(".hello").text("Veuillez saisir votre birthday");
+            $('#myModal').modal('show');
+            x=x+1 ;
+
+        }
 
         if(x==0) {
             $(".hello").text("welcome");
             $('#myModal').modal('show');
-
         }
 
 
