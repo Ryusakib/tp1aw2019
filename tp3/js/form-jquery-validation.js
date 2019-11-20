@@ -1,7 +1,5 @@
 $( document ).ready(function() {
-    $( "#txtbirthday" ).datepicker({
-        inline: true
-    });
+   
     $("#form1").on("submit",function(event){
         event.preventDefault();
 
