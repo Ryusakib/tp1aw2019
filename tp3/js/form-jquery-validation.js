@@ -29,7 +29,7 @@ $( document ).ready(function() {
 
             if (x==0) {
             $(".hello").text("welcome" +" "+ $("#txtNom").val());
-            $(".modal-body").html('<img src="image3.png"/>');
+           
             $('#myModal').modal('show');}
             
 
