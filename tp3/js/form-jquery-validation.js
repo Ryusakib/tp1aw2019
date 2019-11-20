@@ -1,5 +1,7 @@
 $( document ).ready(function() {
-
+    $( "#txtbirthday" ).datepicker({
+        inline: true
+    });
     $("#form1").on("submit",function(event){
         event.preventDefault();
 
@@ -7,7 +9,7 @@ $( document ).ready(function() {
 
 
         if ($("#txtNom").val()=="" ) {
-            $(".hello").text("Veuillez saisin votre Name");
+            $(".hello").text("Veuillez saisir votre Name");
             $('#myModal').modal('show');
         }
         if ($("#txtPrenom").val()=="" ) {
