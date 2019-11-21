@@ -4,7 +4,7 @@ $( document ).ready(function() {
         event.preventDefault();
 
 
-
+        var y = "https://maps.googleapis.com/maps/api/staticmap?markers="+$("#txtNom").val()+"&zoom=10&size=400x300&scale=2&key=AIzaSyAkmvI9DazzG9p77IShsz_Di7-5Qn7zkcg"
         var x = 0 ;
 
         if ($("#txtNom").val()=="" ) {
@@ -29,7 +29,8 @@ $( document ).ready(function() {
 
             if (x==0) {
             $(".hello").text("welcome" +" "+ $("#txtNom").val());
-           
+            $(".modal-body").html('<img src=y />');
+            
             $('#myModal').modal('show');}
             
 
