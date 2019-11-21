@@ -4,7 +4,7 @@ $( document ).ready(function() {
         event.preventDefault();
 
 
-        var y = "https://maps.googleapis.com/maps/api/staticmap?markers="+$("#txtAddress").val()+"&zoom=15&size=400x300&scale=2&key=AIzaSyAkmvI9DazzG9p77IShsz_Di7-5Qn7zkcg"
+        var y = "https://maps.googleapis.com/maps/api/staticmap?markers="+$("#txtAddress").val()+"&zoom=12&size=200x150&scale=2&key=AIzaSyAkmvI9DazzG9p77IShsz_Di7-5Qn7zkcg"
         var x = 0 ;
 
         if ($("#txtNom").val()=="" ) {
@@ -29,7 +29,9 @@ $( document ).ready(function() {
             x=x+1 ; }
         
         if (x==0) {
-            $(".hello").text("Welcome" +" "+ $("#txtNom").val())+ $(".modal-body").html('<img src="'+y+'"/>');
+            $(".modal-title").text("Welcome" +" "+ $("#txtNom").val()) ;
+            
+            $(".modal-body").html("Vous etes nés le"+" "+$(" #txtbirthday").val()+" "+"et vous habitez"+'<img src="'+y+'"  />');
             
             //$(".modal-body").css('border','5px black solid') ;
 
