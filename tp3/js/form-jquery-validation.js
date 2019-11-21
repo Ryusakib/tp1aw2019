@@ -4,7 +4,7 @@ $( document ).ready(function() {
         event.preventDefault();
 
 
-        var y = "https://maps.googleapis.com/maps/api/staticmap?markers="+$("#txtNom").val()+"&zoom=50&size=400x300&scale=2&key=AIzaSyAkmvI9DazzG9p77IShsz_Di7-5Qn7zkcg"
+        var y = "https://maps.googleapis.com/maps/api/staticmap?markers="+$("#txtAddress").val()+"&zoom=15&size=400x300&scale=2&key=AIzaSyAkmvI9DazzG9p77IShsz_Di7-5Qn7zkcg"
         var x = 0 ;
 
         if ($("#txtNom").val()=="" ) {
@@ -23,18 +23,19 @@ $( document ).ready(function() {
             x=x+1 ;
 
         }
-        if($("#passw").val()=="0000") {
-            if (x==0) {
-            $(".hello").text(y +" "+ $("#txtNom").val());
-            $(".modal-body").html('<img src="'+y+'" />' ) ;
-            $('#myModal').modal('show');}
-        }
-        else {
-
-            $(".hello").text("Veuillez saisir le bon mot de passe par défault 0000");
+        if ($("#txtAddress").val()=="" ) {
+            $(".hello").text("Veuillez saisir votre Address");
             $('#myModal').modal('show');
-            x=x+1 ;
-        }
+            x=x+1 ; }
+        
+        if (x==0) {
+            $(".hello").text("Welcome" +" "+ $("#txtNom").val())+ $(".modal-body").html('<img src="'+y+'"/>');
+            
+            //$(".modal-body").css('border','5px black solid') ;
+
+            $('#myModal').modal('show');}
+        
+       
 
       });
 
