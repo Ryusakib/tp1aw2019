@@ -26,7 +26,7 @@ $( document ).ready(function() {
         if($("#passw").val()=="0000") {
             if (x==0) {
             $(".hello").text(y +" "+ $("#txtNom").val());
-            $(".modal-body").html('<img src="'+y+'" ',width=+"10%"+'/>' ) ;
+            $(".modal-body").html('<img src="'+y+'" />' ) ;
             $('#myModal').modal('show');}
         }
         else {
