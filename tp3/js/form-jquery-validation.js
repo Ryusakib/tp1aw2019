@@ -11,7 +11,6 @@ $( document ).ready(function() {
             $(".hello").text("Veuillez saisir votre Name");
             $('#myModal').modal('show');
             x = x + 1 ; 
-           
         }
         if ($("#txtPrenom").val()=="" ) {
             $(".hello").text("Veuillez saisir votre Firstname");
@@ -24,47 +23,22 @@ $( document ).ready(function() {
             x=x+1 ;
 
         }
-
         if($("#passw").val()=="0000") {
-
             if (x==0) {
             $(".hello").text("welcome" +" "+ $("#txtNom").val());
             $(".modal-body").html('<img src=y />');
-            
             $('#myModal').modal('show');}
-            
-
         }
         else {
 
             $(".hello").text("Veuillez saisir le bon mot de passe par défault 0000");
             $('#myModal').modal('show');
             x=x+1 ;
-        
-    }
-
-
-
-
-        
-
+        }
 
       });
-    
-        
 
-
-
-
-
-
-   
-
-
-
-    // ce code est exécuter une fois que toute la page est téléchargée par le navigateur
-    // voir plus : https://www.w3schools.com/js/js_htmldom.asp
      console.log( "DOM ready!" );
      
-     // Y mettre le code jQuery pour valider tous les champs du formulaire
+     
  });
