@@ -18,7 +18,7 @@
 
         <!-- composants JS de boostrap (modal http://getbootstrap.com/docs/4.0/components/modal/ , collapse...) -->
         <script src="js/bootstrap.min.js"></script>
-
+        <script src="js/gps.js"></script>
         <script src="js/form-jquery-validation.js"></script>
 
 
@@ -58,8 +58,8 @@
                 <div class="form-group">
                     <label for='txtNom'>Name</label>
                     <input type="text" class="form-control" id="txtNom"  aria-describedby="emailHelp" placeholder="Enter name">
-
                 </div>
+                <div class="nome"></div>
 
                 <!-- Prenom-->
                 <div class="form-group">
@@ -75,13 +75,15 @@
                 </div>
 
                 <!-- Address -->
-                <div class="form-row">
-                  <div class="form-group col-2">
-                      <label for="adresse">Adresse</label>
-                  </div>
+                <div class="form-group">
+                  <div class="form-group-1">
+                      <label for="txtAddress">Adresse</label>
+                      <input type="text" class="form-control" id="txtAddress" aria-describedby="emailHelp" placeholder="Enter email"> 
+                  <div id="map"></div>
+                    </div>
                   
-                  <div class="form-group col-1">
-                      <button class="btn btn-warning" type="button" id="gps">📍 GPS</button>
+                  <div class="form-group-1">
+                      <button class="btn" type="button" id="gps" onclick="get" >📍 GPS</button>
                   </div>
                   <div class="col-1">
                   </div>
@@ -90,7 +92,6 @@
                 <div class="form-group">
                   <label for="exampleInputEmail1">Email address</label>
                   <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
-                  <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
                 </div>
 
                 
