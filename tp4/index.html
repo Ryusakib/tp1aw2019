@@ -3,12 +3,24 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="x-ua-compatible" content="ie=edge">
-        <title>TP4</title>
+        <title>TP3</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <link rel="apple-touch-icon" href="apple-touch-icon.png">
-        <!-- Place favicon.ico in the root directory -->
+        <!-- jquery pour pouvoir utiliser les composants JS de boostap (modal, tooltip...) -->
+        <script src="js/jquery-3.2.1.slim.min.js"></script>
+
+        <!-- CSS boostrap -->
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/form.css">
+
+        <script src="js/popper.min.js"></script>
+
+        <!-- composants JS de boostrap (modal http://getbootstrap.com/docs/4.0/components/modal/ , collapse...) -->
+        <script src="js/bootstrap.min.js"></script>
+
+        <script src="js/form-jquery-validation.js"></script>
+
 
         <style>
           body{
@@ -25,9 +37,87 @@
         <!--<script src="main.js"></script>-->
     </head>
     <body>        
-        <h1>TP4</h1>
-        <!-- Add your site or application content here -->
-        <p>Hello world! This is HTML5 Boilerplate.</p>
-        <img src="../galilee.png" alt="Logo Galilee"/>
-    </body>
+        <!--
+        <div class="container">
+                <div class="row">
+                        <div class="col-sm">
+                          One of three columns
+                        </div>
+                        <div class="col-sm">
+                          One of three columns
+                        </div>
+                        <div class="col-sm">
+                          One of three columns
+                        </div>
+                      </div>
+        </div>   
+        -->
+      </br><h1 id="hi"><center>Formulaire</center></h1></br> 
+        <form id="form1" >
+                <!-- Nom -->
+                <div class="form-group">
+                    <label for='txtNom'>Name</label>
+                    <input type="text" class="form-control" id="txtNom"  aria-describedby="emailHelp" placeholder="Enter name">
+
+                </div>
+
+                <!-- Prenom-->
+                <div class="form-group">
+                        <label for="txtPrenom">Firstname</label>
+                        <input type="text" class="form-control"  id="txtPrenom"  aria-describedby="emailHelp" placeholder="Enter firstname">
+                </div>
+
+                <!-- Date de naissance -->
+                <div class="form-group">
+                        <label for="txtbirthday">Birth-day</label>
+                        <input type="date" class="form-control" id="txtbirthday" aria-describedby="emailHelp" placeholder="Enter birth day">
+                        
+                </div>
+
+                <!-- Email -->
+                <div class="form-group">
+                  <label for="txtAddress">address</label>
+                  <input type="text" class="form-control"  id="txtAddress"  aria-describedby="emailHelp" placeholder="Enter address">
+                </div>
+
+                <!-- Email -->
+                <div class="form-group">
+                  <label for="exampleInputEmail1">Email address</label>
+                  <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+                  <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+                </div>
+
+                
+
+               
+                <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+        
+        <div class="modal" tabindex="-1" role="dialog" id="myModal">
+                <div class="modal-dialog" role="document">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title">Modal title</h5>
+                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                      </button>
+                    </div>
+                    <div class="modal-body">
+                      <p class="hello">Corps de la modal à modifier après validation du formulaire</p>
+                    </div>
+                    
+                  </div>
+                </div>
+        </div>
+
+
+      
+
+
+
+
+
+
+
+    </body>    
 </html>
