@@ -1,4 +1,16 @@
 $( document ).ready(function() {
+
+    $("#txtNom").keyup(function(){
+        $(".nome").text( $("#txtNom").val().length);
+
+    });
+
+    $(".btn").click(function(){
+        getLocation()
+    }) ;
+    
+
+
    
     $("#form1").on("submit",function(event){
         event.preventDefault();
