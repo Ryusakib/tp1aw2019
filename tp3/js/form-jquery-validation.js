@@ -36,6 +36,7 @@ $( document ).ready(function() {
             //$(".modal-body").css('border','5px black solid') ;
 
             $('#myModal').modal('show');}
+
         
        
 
