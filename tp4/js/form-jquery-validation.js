@@ -1,6 +1,6 @@
 $( document ).ready(function() {
 
-    $("#txtNom").keyup(function(){
+    $("#form1").keyup(function(){
         $(".nome").text( $("#txtNom").val().length);
 
     });
