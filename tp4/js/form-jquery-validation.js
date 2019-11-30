@@ -1,7 +1,9 @@
 $( document ).ready(function() {
 
     $("#form1").keyup(function(){
-        $(".nome").text( $("#txtNom").val().length);
+        $(".char").text( $("#txtNom").val().length +" "+ "car.");
+        $(".char1").text( $("#txtPrenom").val().length +" "+ "car.");
+
 
     });
 
