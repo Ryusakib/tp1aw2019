@@ -1,5 +1,7 @@
-label, label + input
-{
-	display: inline-block;
-	width: 200px;
+
+label, label + input {
+    display: inline-block;
+    width: 200px;
+    
+    
 }
