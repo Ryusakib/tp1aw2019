@@ -55,47 +55,80 @@
       </br><h1 id="hi"><center>Formulaire</center></h1></br> 
         <form id="form1" >
                 <!-- Nom -->
-                <div class="form-group" width="100%">
+                <div class="form-row" >
                     
-                    <label for='txtNom'>Name</label>
+                    <div  class="form-group col-2">
+                        <label for="form-group col-2">Name</label>
+                    </div>
+                    <div class="form-group col">
                     <input type="text" class="form-control" id="txtNom"  aria-describedby="emailHelp" placeholder="Enter name">
-                    <span id="firstNameBadge" class="char"></span>
+                    </div>
+                    <div class="char">
+                    
+                    </div>
                 </div>
                  
 
                 <!-- Prenom-->
-                <div class="form-group">
-                        <label for="txtPrenom">Firstname</label>
-                        <input type="text" class="form-control"  id="txtPrenom"  aria-describedby="emailHelp" placeholder="Enter firstname">
-                        <span id="firstNameBadge" class="char1"></span>
+                <div class="form-row">
+                        <div class="form-group col-2">
+                            <label for="txtPrenom">Firstname</label>
+                        </div>
+                        <div class="form-group col">
+                            <input type="text" class="form-control"  id="txtPrenom"  aria-describedby="emailHelp" placeholder="Enter firstname">
+
+                        </div>
+                        <div class="char1" ></div>
+                        
                 </div>
                 
 
                 <!-- Date de naissance -->
-                <div class="form-group">
+                <div class="form-row">
+                      <div class="form-group col-2">
                         <label for="txtbirthday">Birth-day</label>
-                        <input type="date" class="form-control" id="txtbirthday" aria-describedby="emailHelp" placeholder="Enter birth day">
+                      </div>
+                      <div class="form-group col">
+                          <input type="date" class="form-control" id="txtbirthday" aria-describedby="emailHelp" placeholder="Enter birth day">
+                      </div>
+                        
                         
                 </div>
 
                 <!-- Address -->
-                <div class="form-group">
-                  <div class="form-group-1">
+                <div class="form-row">
+
+                  <div class="form-group col-2">
                       <label for="txtAddress">Adresse</label>
-                      <input type="text" class="form-control" id="txtAddress" aria-describedby="emailHelp" placeholder="Enter email"> 
-                  <div id="map"></div>
-                    </div>
+                  </div>
+
+                  <div class="form-group col">
+                      <input type="text" class="form-control" id="txtAddress" aria-describedby="emailHelp" placeholder="Enter address"> 
+                  </div>
+
+                  <div id="map">
+
+                  </div>
+                
+                    
                   
-                  <div class="form-group-1">
+                  <div class="form-group col-1">
                       <button class="btn" type="button" id="gps" onclick="get" >📍 GPS</button>
-                  </div>
-                  <div class="col-1">
-                  </div>
+                  </div>   
+
+                </div>
+
+                  
                 </div>
                 <!-- Email -->
-                <div class="form-group">
-                  <label for="exampleInputEmail1">Email address</label>
-                  <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+                <div class="form-row">
+                  <div class="form-group col-2">
+                      <label for="exampleInputEmail1">Email address</label>
+                  </div>
+                 <div class="form-group col">
+                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+                 </div> 
+                  
                 </div>
 
                 
