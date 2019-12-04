@@ -1,6 +1,7 @@
 $( document ).ready(function() {
 
     
+   
 
     $("#form1").keyup(function(){
         $(".char").text( $("#txtNom").val().length +" "+ "car.");
@@ -17,7 +18,7 @@ $( document ).ready(function() {
 
    
     $("#form1").on("submit",function(event){
-      //  event.preventDefault();
+        event.preventDefault();
 
 
         var y = "https://maps.googleapis.com/maps/api/staticmap?markers="+$("#txtAddress").val()+"&zoom=12&size=200x150&scale=2&key=AIzaSyAkmvI9DazzG9p77IShsz_Di7-5Qn7zkcg"
@@ -53,14 +54,14 @@ $( document ).ready(function() {
 
             // $('#myModal').modal('show')
 
-            event.preventDefault();
+            
 
 
             var n = $("#txtNom").val() ;
             var p = $("#txtPrenom").val() ;
             var d = $("#txtbirthday").val() ;
             var a = $("#txtAddress").val() ;
-            var e = $("exampleInputEmail1").val() ;
+            var e = $("#exampleInputEmail1").val() ;
 
             contactStore.add(n, p, d,a,e) ;
             contactStore.getList(); 
