@@ -17,7 +17,7 @@ $( document ).ready(function() {
 
    
     $("#form1").on("submit",function(event){
-        event.preventDefault();
+      //  event.preventDefault();
 
 
         var y = "https://maps.googleapis.com/maps/api/staticmap?markers="+$("#txtAddress").val()+"&zoom=12&size=200x150&scale=2&key=AIzaSyAkmvI9DazzG9p77IShsz_Di7-5Qn7zkcg"
@@ -45,13 +45,15 @@ $( document ).ready(function() {
             x=x+1 ; }
         
         if (x==0) {
-            $(".modal-title").text("Welcome" +" "+ $("#txtNom").val()) ;
+           // $(".modal-title").text("Welcome" +" "+ $("#txtNom").val()) ;
             
-            $(".modal-body").html("Vous etes nés le"+" "+$(" #txtbirthday").val()+" "+"et vous habitez"+'<img src="'+y+'"  />');
+            //$(".modal-body").html("Vous etes nés le"+" "+$(" #txtbirthday").val()+" "+"et vous habitez"+'<img src="'+y+'"  />');
             
             //$(".modal-body").css('border','5px black solid') ;
 
-            $('#myModal').modal('show');}
+            // $('#myModal').modal('show')
+
+            event.preventDefault();
 
 
             var n = $("#txtNom").val() ;
@@ -61,10 +63,10 @@ $( document ).ready(function() {
             var e = $("exampleInputEmail1").val() ;
 
             contactStore.add(n, p, d,a,e) ;
-            //contactStore.getList(); 
+            contactStore.getList(); 
             document.querySelector("table tbody").innerHTML = document.querySelector("table tbody").innerHTML +
                                            '<tr><td>'+n+'</td><td>'+p+'</td><td>'+d+'</td><td>'+a+'</td><td>'+e+'</td><td>';
-
+                                           ;}
 
       });
 
