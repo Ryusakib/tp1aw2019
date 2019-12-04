@@ -53,8 +53,18 @@ $( document ).ready(function() {
 
             $('#myModal').modal('show');}
 
-            contactStore.add($("#txtNom").val(), $("#txtPrenom").val(), $("#txtbirthday").val(), $("#txtAddress").val(),$("exampleInputEmail1").val()) ;
-            contactStore.getList(); 
+
+            var n = $("#txtNom").val() ;
+            var p = $("#txtPrenom").val() ;
+            var d = $("#txtbirthday").val() ;
+            var a = $("#txtAddress").val() ;
+            var e = $("exampleInputEmail1").val() ;
+
+            contactStore.add(n, p, d,a,e) ;
+            //contactStore.getList(); 
+            document.querySelector("table tbody").innerHTML = document.querySelector("table tbody").innerHTML +
+                                           '<tr><td>'+n+'</td><td>'+p+'</td><td>'+d+'</td><td>'+a+'</td><td>'+e+'</td><td>';
+
 
       });
 
