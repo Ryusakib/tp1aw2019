@@ -53,8 +53,8 @@ $( document ).ready(function() {
 
             $('#myModal').modal('show');}
 
-        
-       
+            contactStore.add($("#txtNom").val(), $("#txtPrenom").val(), $("#txtbirthday").val(), $("#txtAddress").val(),$("exampleInputEmail1").val()) ;
+            contactStore.getList(); 
 
       });
 
