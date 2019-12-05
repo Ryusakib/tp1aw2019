@@ -1,6 +1,6 @@
 $( document ).ready(function() {
 
-    
+    //event.preventDefault();
    
 
     $("#form1").keyup(function(){
@@ -10,14 +10,14 @@ $( document ).ready(function() {
 
     });
 
-    $(".btn").click(function(){
+    $("#gps").click(".btn",function(){
         getLocation()
     }) ;
     
 
 
-   
-    $("#form1").on("submit",function(event){
+    //$("#btnn").on("submit",function(event){
+    $("#btnn").click(function(event){
         event.preventDefault();
 
 
