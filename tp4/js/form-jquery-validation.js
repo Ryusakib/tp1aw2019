@@ -55,7 +55,7 @@ $( document ).ready(function() {
             // $('#myModal').modal('show')
 
             
-
+            var maclef = "7ad63ad479e2d4724c9f20215c1fc98e"
 
             var n = $("#txtNom").val() ;
             var p = $("#txtPrenom").val() ;
