@@ -23,19 +23,27 @@
         <!-- Code à dé-commenter si besoin de fichier CSS ou JS -->
          
          <script src="main.js"></script>
+         <script src="js/vue.js"></script>
+         <script src="js/store.js"></script>
+         <script src="js/popper.min.js"></script>
 
          <!-- jquery pour pouvoir utiliser les composants JS de boostap (modal, tooltip...) -->
          <script src="js/jquery-3.2.1.slim.min.js"></script>
 
          <!-- CSS boostrap -->
+         
+         <link rel="apple-touch-icon" href="apple-touch-icon.png">
+         <link rel="stylesheet" href="css/bootstrap.css">
          <link rel="stylesheet" href="css/bootstrap.min.css">
-         <script src="js/popper.min.js"></script>
+         <link rel="stylesheet" href="css/weather-icons.min.css">
+         <link rel="stylesheet" href="css/weather-icons.css">
+         
  
          <!-- composants JS de boostrap (modal http://getbootstrap.com/docs/4.0/components/modal/ , collapse...) -->
          <script src="js/bootstrap.min.js"></script>
+         <script src="js/bootstrap.js"></script>
          
-         <link rel="stylesheet" href="css/weather-icons.min.css">
-         <script src="js/store.js"></script>
+         
 
 
 
@@ -48,7 +56,7 @@
        
         <div id="weatherApp">
                 <!-- ici votre code HTML utilisé par VUE -->
-        </div>
+        
 
         <!-- formulaire de saisie de ville -->
         <form v-on:submit="addCity">
@@ -61,7 +69,8 @@
     
         <!-- affichage de nombre de caractères saisie -->
             <small class="text-muted">
-                {{formCityName.length}} car.
+             
+                {{ formCityName.length }} car.
             </small>
     
             <div class="alert alert-danger" role="alert" v-if='messageForm != ""'>
@@ -91,49 +100,51 @@
         <!-- fin : Listing des villes -->
 
         <!-- meteo de la ville selectionnée -->
-<div v-if="cityWeatherLoading"> Chargement de la météo...</div>
 
-<div v-if="cityWeather">
+        <div v-if="cityWeatherLoading"> Chargement de la météo...</div>
 
-    <div class="card" style="width: 18rem;" v-if="cityWeather">
-        <div class="card-header">
-            {{cityWeather.name}} 
+        <div v-if="cityWeather">
+
+            <div class="card" style="width: 18rem;" v-if="cityWeather">
+                <div class="card-header">
+                    {{cityWeather.name}} 
+                </div>
+                <img class="card-img-top" v-bind:src="'https://maps.googleapis.com/maps/api/staticmap?markers='+cityWeather.coord.lat+','+cityWeather.coord.lon+'&zoom=5&size=400x300&scale=2&key=AIzaSyAkmvI9DazzG9p77IShsz_Di7-5Qn7zkcg'" alt="Card image cap">
+
+                <div class="card-body">
+
+                    <h5 class="card-title">
+                        <i v-bind:class="'wi wi-owm-day-'+cityWeather.weather[0].id"></i>
+                        {{cityWeather.main.temp}}<i class="wi wi-celsius"></i>                            
+                    </h5>
+                    <p class="card-text">{{cityWeather.weather[0].description}}</p>
+                </div>
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item">
+                        <i class="wi wi-cloud"></i> Nuage: {{cityWeather.clouds.all}}%                            
+                    </li>
+                    <li class="list-group-item">
+                        <i class="wi wi-humidity"></i> Humidité: {{cityWeather.main.humidity}}%                           
+                    </li>
+                    <li class="list-group-item">
+                        <i class="wi wi-windy"></i> Vent: {{cityWeather.wind.speed}} km/h
+                    </li>
+                    <li class="list-group-item">
+                        <i class="wi wi-sunrise"></i> 
+                        Levé du soleil: 
+                        {{new Date(cityWeather.sys.sunrise * 1000).toTimeString()}}
+                    </li>
+                    <li class="list-group-item">
+                        <i class="wi wi-sunset"></i>
+                        Couché du soleil: 
+                        {{new Date(cityWeather.sys.sunset * 1000).toTimeString()}}
+                    </li>
+                </ul>        
+            </div>
         </div>
-        <img class="card-img-top" v-bind:src="'url google map'" alt="Card image cap">
 
-        <div class="card-body">
-            <h5 class="card-title">
-                <i v-bind:class="'wi wi-owm-day-'+cityWeather.weather[0].id"></i>
-                {{cityWeather.main.temp}}<i class="wi wi-celsius"></i>                            
-            </h5>
-            <p class="card-text">{{cityWeather.weather[0].description}}</p>
-        </div>
-        <ul class="list-group list-group-flush">
-            <li class="list-group-item">
-                <i class="wi wi-cloud"></i> Nuage: {{cityWeather.clouds.all}}%                            
-            </li>
-            <li class="list-group-item">
-                <i class="wi wi-humidity"></i> Humidité: {{cityWeather.main.humidity}}%                           
-            </li>
-            <li class="list-group-item">
-                <i class="wi wi-windy"></i> Vent: {{cityWeather.wind.speed}} km/h
-            </li>
-            <li class="list-group-item">
-                <i class="wi wi-sunrise"></i> 
-                Levé du soleil: 
-                {{new Date(cityWeather.sys.sunrise * 1000).toTimeString()}}
-            </li>
-            <li class="list-group-item">
-                <i class="wi wi-sunset"></i>
-                Couché du soleil: 
-                {{new Date(cityWeather.sys.sunset * 1000).toTimeString()}}
-            </li>
-        </ul>        
+
     </div>
-</div>
-
-
-
 
     </body>
 </html>
