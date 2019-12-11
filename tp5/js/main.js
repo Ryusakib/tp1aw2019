@@ -14,7 +14,7 @@ window.onload = function () {
 
             // liste des villes saisies, initialiser avec Paris
             cityList: [{
-                name : 'Paris'
+                name : ''
             }],
 
             // cityWeather contiendra les données météo reçus par openWeatherMap
@@ -24,9 +24,11 @@ window.onload = function () {
             cityWeatherLoading : false
         },
 
-            // 'mounted' est exécuté une fois l'application VUE totalement disponible
-            // Plus d'info. sur le cycle de vie d'une app VUE : 
-            // https://vuejs.org/v2/guide/instance.html#Lifecycle-Diagram
+        
+
+        // 'mounted' est exécuté une fois l'application VUE totalement disponible
+        // Plus d'info. sur le cycle de vie d'une app VUE : 
+        // https://vuejs.org/v2/guide/instance.html#Lifecycle-Diagram
         mounted : function(){
             this.loaded = true;
             this.readData();
@@ -45,74 +47,40 @@ window.onload = function () {
 
                 console.log('formCityName:',this.formCityName);
                 // A compléter dans la suite du TP  
-            },
-            remove: function (_city) {      
-                // A compléter dans la suite du TP          
-            }, 
-            meteo: function (_city) {  
-                // A compléter dans la suite du TP              
-            }
-        }
-        
-    });
-
-
-    app = new Vue({
-        el: '#weatherApp',
-        data: {
-            //[...]
-        },
-    
-        // 💡 code à copier
-        // define methods under the `methods` object
-        methods: {
-          addCity: function (event) {
-            event.preventDefault(); // pour ne pas recharger la page à la soumission du formulaire
-    
-            // if(this.isCityExist(this.formCityName)){
-            //    this.messageForm = 'existe déjà';
-            //}else{
+                    if(this.isCityExist(this.formCityName)){
+               this.messageForm = 'existe déjà';
+             }
+                 else{
                 this.cityList.push({name : this.formCityName});
-    
+
                 // remise à zero du message affiché sous le formulaire
                 this.messageForm = '';
-    
+
                 // remise à zero du champ de saisie
                 this.formCityName = '';
-            //}
-          },
+              }
+            },
+              isCityExist: function (_cityName){
 
-        
-        
-            // 💡 méthode à copier
-            isCityExist: function (_cityName){
-
-            // la méthode 'filter' retourne une liste contenant tous les items ayant un nom égale à _cityName
-            // doc. sur filter : https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Objets_globaux/Array/filter
-                if( this.cityList.filter(item => 
-                                        item.name.toUpperCase() == _cityName.toUpperCase()
-                                    ).length>0){
-                return true;
-                }else{
+                // la méthode 'filter' retourne une liste contenant tous les items ayant un nom égale à _cityName
+                // doc. sur filter : https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Objets_globaux/Array/filter
+                if( this.cityList.filter(item => item.name.toUpperCase() == _cityName.toUpperCase()).length>0){
+                    return true;
+                }
+                else{
                     return false;
                 }
-            },
-            remove: function(_city){
-                // on utilise 'filter' pour retourne une liste avec tous les items ayant un nom différent de _city.name
-                this.cityList = this.cityList.filter(item => item.name != _city.name);
-            },
-            // à ajouter à la suite des autres méthodes VUE
-
-
-            // à ajouter à la suite des autres méthodes VUE
-
-            // à ajouter à la suite des autres méthodes VUE
- 
-
-            meteo : function (_city){
-
-                this.cityWeatherLoading = true;
+           },
             
+            remove: function (_city) {      
+                // A compléter dans la suite du TP   
+                // on utilise 'filter' pour retourne une liste avec tous les items ayant un nom différent de _city.name
+               this.cityList = this.cityList.filter(item => item.name != _city.name);       
+            }, 
+            meteo: function (_city) {  
+                // A compléter dans la suite du TP 
+                this.cityWeatherLoading = true;
+
                 // appel AJAX avec fetch
                 fetch('https://api.openweathermap.org/data/2.5/weather?q='+_city.name+'&units=metric&lang=fr&apikey=7ad63ad479e2d4724c9f20215c1fc98e')
                     .then(function(response) {
@@ -133,11 +101,9 @@ window.onload = function () {
                             app.message = 'Météo introuvable pour ' + _city.name 
                                             + ' (' + json.message+ ')';
                         }        
-                    });        
+                    });    
+                        
                 }
-            }      
-
-
+        }
     });
-    
 }
