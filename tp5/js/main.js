@@ -13,9 +13,7 @@ window.onload = function () {
             messageForm: '',
 
             // liste des villes saisies, initialiser avec Paris
-            cityList: [{
-                name : ''
-            }],
+            cityList: [],
 
             // cityWeather contiendra les données météo reçus par openWeatherMap
             cityWeather : null,
@@ -56,6 +54,7 @@ window.onload = function () {
                 // remise à zero du message affiché sous le formulaire
                 this.messageForm = '';
 
+                this.meteo({name : this.formCityName});
                 // remise à zero du champ de saisie
                 this.formCityName = '';
               }
